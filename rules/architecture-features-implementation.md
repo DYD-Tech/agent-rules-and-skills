@@ -1,13 +1,12 @@
-# 架构、功能与实现文档维护规则
+# Architecture, features, and implementation documentation rules
 
-本项目采用“架构—功能—实现”文档支持开发、验收与长期学习。默认位置为 `doc/架构-功能-实现/`；已有等价文档时复用，不维护两份相同说明。
+Use architecture–features–implementation documentation to support development, acceptance, and long-term learning. The default location is `doc/架构-功能-实现/`; reuse an existing equivalent rather than maintaining duplicate explanations. Write in the requested or established project language. English instructions do not require English output or renaming existing paths.
 
-- 架构讲清整体结构、主要协作关系与关键选择；功能呈现软件能力全貌和对外行为；实现解释机制、理由、代价与适用条件，提供必要的源码和验证入口。用户不读代码也应能理解正文，代理必须核对实际依据。
-- 这些文档只描述当前支持版本，保留理解当前设计所需的理由和限制，不追加按日期排列的改动历史。旧方案、变更经过和被替代决定放入开发日志或既有历史记录，必要时链接；没有日志模块也遵守此边界。
-- 开发前读取相关说明；新功能或重要行为变化的预期写入已有需求或任务记录。交付时依据实际实现和验证更新当前说明，计划功能不列为当前能力，未知不能写成事实。
-- 创建、补齐或实质更新这些文档时，读取并执行项目配置的 `architecture-features-implementation` 技能，无需用户点名。微小文字修正直接完成；若变更未影响已有说明，不制造文档修改或固定的“无需更新”报告。
-- 架构变化更新总览，功能范围变化更新功能索引，行为或机制变化更新相关功能页。共享机制说明一次并链接；不为一个局部任务扫描整库、建立整套文档或重写旧文档。
-- 用户要求首次建立全貌时，先总览与功能索引，再分批完成相关说明；执行全部已授权范围，不把第一批当成完成。未核实区域明确标注，不能把局部理解包装成全貌。
+- Architecture explains the overall structure, collaboration, and key choices. Features describe the complete capabilities and external behavior. Implementation explains mechanisms, reasons, costs, and applicability, with useful source and verification references. Readers should understand the prose without reading code; agents must verify its factual basis.
+- Describe the currently supported version. Preserve reasons and limits needed to understand the current design; do not append dated change history. Put superseded approaches, chronology, and replaced decisions in development logs or existing historical records, linking when useful. This boundary applies without the log module too.
+- Read relevant documentation before development. Record intended new behavior in existing requirements or task records. At delivery, update current documentation from the actual implementation and verification. Do not present plans as existing features or unknowns as facts.
+- When creating, completing, or substantially updating these documents, read and apply the configured `architecture-features-implementation` skill without requiring the user to name it. Handle tiny wording fixes directly. Do not manufacture documentation changes or routine no-update reports when existing explanations are unaffected.
+- Update the overview for architectural changes, the feature index for capability changes, and relevant pages for behavior or mechanism changes. Explain shared mechanisms once and link them. A local task does not require scanning or documenting the entire repository.
+- When explicitly asked for initial comprehensive documentation, establish the overview and feature index, then complete the authorized scope in batches. Do not treat the first batch as completion. Mark unverified areas instead of presenting partial understanding as complete coverage.
 
-接入时在目标项目指引中写明技能实际入口。技能缺失时说明缺失，按本规则继续已授权工作，不声称已调用。选择此文档政策后即为日常约定，不每次询问是否维护文档。
-
+During installation, put the actual skill entry path in project instructions. If the skill is missing, explain that and continue authorized work under these rules without claiming invocation. Once selected, this documentation policy is ongoing; do not repeatedly ask whether to maintain documentation.

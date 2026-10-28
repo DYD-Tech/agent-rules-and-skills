@@ -3,16 +3,21 @@
   "modules": [
     {
       "id": "development",
-      "name": "通用规则",
+      "name": "General development",
       "aliases": [
-        "通用开发规则"
+        "通用规则",
+        "通用开发规则",
+        "General development"
       ],
       "tags": [
         "开发",
         "质量",
-        "标准"
+        "标准",
+        "development",
+        "quality",
+        "standards"
       ],
-      "summary": "以认真维护项目的团队为标准，明确实现、查证、验证和协作要求。",
+      "summary": "Develop to a diligent professional-team standard with concrete implementation, evidence, verification, and collaboration rules.",
       "source": {
         "type": "bundled"
       },
@@ -23,23 +28,28 @@
       "requires": [],
       "suggests": [],
       "activation": {
-        "rules": "每次任务读取并应用",
+        "rules": "Read and apply on every task",
         "skills": []
       }
     },
     {
       "id": "architecture-features-implementation",
-      "name": "架构—功能—实现",
+      "name": "Architecture–Features–Implementation",
       "aliases": [
+        "架构—功能—实现",
         "架构功能实现",
-        "架构-功能-实现"
+        "架构-功能-实现",
+        "Architecture–Features–Implementation"
       ],
       "tags": [
         "文档",
         "架构",
-        "学习"
+        "学习",
+        "documentation",
+        "architecture",
+        "learning"
       ],
-      "summary": "维护当前版本的三层说明，按需解释机制和设计知识。",
+      "summary": "Maintain current-version architecture, feature, and implementation explanations, adding mechanisms and design knowledge as needed.",
       "source": {
         "type": "bundled"
       },
@@ -52,27 +62,32 @@
       "requires": [],
       "suggests": [],
       "activation": {
-        "rules": "每次任务读取并应用",
+        "rules": "Read and apply on every task",
         "skills": [
           {
             "name": "architecture-features-implementation",
-            "when": "创建、补齐或实质更新架构、功能、实现文档时"
+            "when": "When creating, completing, or substantially updating architecture, feature, or implementation documentation"
           }
         ]
       }
     },
     {
       "id": "development-log",
-      "name": "开发日志",
+      "name": "Development log",
       "aliases": [
-        "变更日志"
+        "开发日志",
+        "变更日志",
+        "Development log"
       ],
       "tags": [
         "历史",
         "变更",
-        "日志"
+        "日志",
+        "history",
+        "changes",
+        "log"
       ],
-      "summary": "按任务记录有意义的变化、原因与验证，和当前说明分开。",
+      "summary": "Record meaningful completed changes, reasons, and verification by task, separate from current documentation.",
       "source": {
         "type": "bundled"
       },
@@ -85,33 +100,38 @@
       "requires": [],
       "suggests": [],
       "activation": {
-        "rules": "每次任务读取并应用",
+        "rules": "Read and apply on every task",
         "skills": [
           {
             "name": "development-log",
-            "when": "有值得追踪的已完成变更或用户明确要求记录时"
+            "when": "When meaningful changes are completed or the user explicitly requests a change record"
           }
         ]
       }
     },
     {
       "id": "dyd-tech/clear-communication",
-      "name": "清晰沟通",
+      "name": "Clear communication",
       "aliases": [
+        "清晰沟通",
         "clear-communication",
-        "communication-skills"
+        "communication-skills",
+        "Clear communication"
       ],
       "tags": [
         "沟通",
         "写作",
-        "表达"
+        "表达",
+        "communication",
+        "writing",
+        "clarity"
       ],
-      "summary": "应用外部 clear-communication 技能提高输出清晰度；不镜像其源码。",
+      "summary": "Apply the external clear-communication skill for clearer output without mirroring its source.",
       "source": {
         "type": "github",
         "repo": "https://github.com/DYD-Tech/communication-skills",
         "ref": "33c284f4fbe5941f7e97d707149cfaf1fd6c84ad",
-        "verification": "2026-10-28 git ls-remote 已核对该提交为上游 main；完整内容与宿主行为在安装时另行核验"
+        "verification": "2026-10-28: git ls-remote verified this commit as upstream main; complete content and host behavior require separate installation-time verification."
       },
       "rule_paths": [],
       "skill_paths": [
@@ -124,7 +144,7 @@
         "skills": [
           {
             "name": "clear-communication",
-            "when": "每次任务；短答轻量检查，复杂内容按技能执行"
+            "when": "Every task; use a lightweight check for short answers and the skill workflow for complex content"
           }
         ]
       }

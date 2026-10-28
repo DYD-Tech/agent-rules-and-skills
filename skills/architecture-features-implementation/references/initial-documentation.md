@@ -1,25 +1,25 @@
-# 首次建立或全面整理文档
+# Initial or comprehensive documentation
 
-仅在用户授权建立完整文档或进行全面整理时使用。日常局部维护不读取、不执行本流程。沿用已知目标和项目材料，不重新索取用户已经明确的信息。
+Use only when the user authorizes comprehensive documentation or reorganization. Do not load or execute this workflow for routine local maintenance. Reuse known goals and project material instead of asking again for established information.
 
-## 确定覆盖范围
+## Establish coverage
 
-读取项目入口、现有文档、实际使用入口及相关实现和测试，建立软件能力与主要部分的对应关系。README 可能过时，目录树也不能证明功能已经可用。优先核对核心使用流程，再看后台与维护能力；有疑点再深入，不先读完所有文件。
+Read project entry points, existing documents, actual usage paths, and relevant code and tests to map capabilities to major parts. A README may be stale, and a directory tree does not prove functionality. Verify core user journeys first, then background and maintenance capabilities; investigate uncertainty rather than reading every file first.
 
-区分当前能力、明确计划和未核实部分；当前文档只列现状，计划放入已有需求或任务记录。只能检查部分实现时，标明文档覆盖范围及未知；不要把没读到的功能认定为不存在。不要顺带实施缺失功能。
+Distinguish current capabilities, explicit plans, and unverified areas. Current pages describe the present; plans stay in existing requirements or tasks. If only part of the implementation can be inspected, state coverage and unknowns. Do not equate unseen features with nonexistent ones or implement missing features as a side effect.
 
-## 建立阅读入口
+## Establish reading entry points
 
-先创建或修正总体架构与功能索引，再按重要性补充功能和实现说明。复用等价文件；不要仅为符合命名建议迁移用户文档或破坏链接。
+Create or correct the overall architecture and feature index first, then add feature and implementation detail by importance. Reuse equivalent files. Do not move user documents or break links solely to match suggested names.
 
-默认使用 `00-总览与分层.md` 和 `01-功能全貌.md`，相关功能先写行为后写实现。一个页面可覆盖多个紧密相关能力；大型功能可分篇，保持索引可达。共享机制只写一处。
+Defaults are `00-总览与分层.md` and `01-功能全貌.md`. Describe behavior before implementation. One page may cover closely related capabilities; large features may span pages if the index remains navigable. Explain shared mechanisms once.
 
-如用户提供的目录组织与默认不同，保留其选择，以相同的三层职责组织内容，不擅自重新设计目录。
+Preserve the user's directory organization when it differs from defaults, applying the same three-layer responsibilities rather than redesigning folders.
 
-## 分批核验并完成
+## Verify and complete in batches
 
-按独立主题分批，先保证核心全貌可读，再补详细机制。每批核对相应代码与证据，更新涉及的图示、索引和交叉链接。已授权整套建档就继续到约定范围完成，不每批停下索取许可；遇到缺失访问权或重要未知时说明具体限制。
+Work by independent topic: make the core picture readable before expanding mechanisms. Verify code and evidence for each batch and update affected diagrams, indexes, and cross-references. Complete the whole authorized scope without requesting permission after every batch; explain concrete limits from missing access or important unknowns.
 
-对缺乏历史依据的决定，解释现有结构与可观察后果，不代作者编造动机。计划和历史分开标记；替代旧决定时保留有价值的记录及指向当前决定的链接。
+Where historical evidence is absent, describe current structure and observable consequences without inventing motives. Distinguish plans and history; preserve valuable replaced decisions with links to their replacements.
 
-最后从用户阅读路径检查：是否能看出全貌，是否能找到每项重要能力，是否不用读代码也能理解关键机制和取舍。只查改动范围及相关链接，不创建空页面、统一更新日期或全库评分来证明完成。
+Finally check the reader's route: can readers understand the whole, find important capabilities, and understand key mechanisms and tradeoffs without code? Check affected content and links. Do not create empty pages, uniformly refresh dates, or score the entire repository to demonstrate completion.

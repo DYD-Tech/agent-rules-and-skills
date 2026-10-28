@@ -1,6 +1,7 @@
-# 开发日志规则
+# Development log rules
 
-- 有值得追踪的功能、行为、结构、约束或重要修复完成时，在本轮交付中应用项目配置的 `development-log` 技能，维护 `doc/开发日志/`；已有等价日志位置时复用。微小润色不强制产生记录。
-- 日志记录做了什么、为什么、验证及必要剩余事项；按任务或主题合并，不记录每次工具调用、每轮聊天或全部代码差异。计划不能写成完成，已完成不能写成已发布。
-- 架构—功能—实现文档描述当前支持版本，保留解释现状必要的理由与限制；日期流水、旧实现经过、被替代决策放在开发日志或既有历史记录中，以必要链接关联。
-- 本模块可独立使用。即使未选择架构文档模块，也不能让日志代替现有使用说明；即使未安装日志技能，也不能将历史流水塞入当前版本文档。
+- For meaningful completed changes to features, behavior, structure, constraints, or important fixes, apply the configured `development-log` skill within the same delivery. Maintain `doc/开发日志/` or reuse an existing equivalent. Minor wording changes do not require entries.
+- Record what changed, why, verification, and necessary remaining work. Consolidate by task or topic, not every tool call, message, or code difference. Plans are not completed work; completion is not publication.
+- Architecture–features–implementation documentation describes the currently supported version, preserving reasons and limits needed to understand it. Put dated chronology, previous implementations, and superseded decisions in development logs or existing historical records, using links where useful.
+- This module works independently. Logs do not replace current usage documentation when no architecture module is selected; missing log skills do not justify putting change history into current-version documentation.
+- Use the user's requested or established project language. English instructions do not require English output or renaming existing paths.

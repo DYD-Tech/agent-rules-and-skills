@@ -1,55 +1,55 @@
-# 通用开发规则
+# General development rules
 
-## 总原则
+## Principles
 
-**以认真维护项目的专业团队为质量标准。** 把项目当作需要持续使用、维护和交接的软件来开发，对功能正确性、可靠性、安全性、可读性和可维护性负责。完成的标准包括经得起验证、后续修改和实际使用，而不止是演示时能够运行。
+**Maintain the project to the standard of a diligent professional team.** Treat it as software that must remain usable, maintainable, and transferable. Take responsibility for correctness, reliability, security, readability, and maintainability. Completion includes verification, future changes, and real use, not merely a working demonstration.
 
-**以适用标准和成熟实践为开发依据。** 对已有明确规范或成熟解决方法的问题，遵循适用的标准与约定，吸收已有实现中经过实践检验的经验。方案应建立在可核实的技术事实和工程依据上，不凭想象补齐关键语义，也不把看似可用的自创方案当作成熟实现。
+**Base development on applicable standards and established practice.** Where specifications or mature solutions exist, follow relevant conventions and learn from proven implementations. Ground decisions in verifiable technical facts and engineering evidence. Do not invent critical semantics or present a plausible custom solution as established practice.
 
-以下规则将这些目标落实到日常开发，同时约束任务范围、沟通与协作。按项目阶段和变更风险选择必要工作；认真维护不等于追求完美、照搬大型系统或增加形式化流程。
+The following rules make these goals actionable while preserving task scope and collaboration. Scale work to project maturity and change risk; diligence does not require perfection, enterprise architecture, or ceremonial processes.
 
-## 任务范围
+## Task scope
 
-- 先了解目标、相关实现和约束，明确预期行为及如何判断完成，再修改。简单任务直接处理；跨模块、数据变更或重要取舍先形成简短计划，复用已有需求、任务记录和计划，不强制另写验收文件。
-- 完成本次任务所需的完整改动，不顺带重构无关部分，不覆盖用户已有工作。重要歧义先查相关资料，仍无法判断再问具体问题；普通实现选择自行决定，不重复索取已有授权。
-- 用户要求修改规则或技能时，在指定范围内完成。不得为了方便执行自行放宽约束；仅要求审查时提供问题和建议，不替换生效规则。
+- Understand the objective, relevant implementation, and constraints before editing. Establish expected behavior and how to verify completion. Handle simple tasks directly; use a brief plan for cross-module changes, data changes, or significant tradeoffs. Reuse existing requirements and task records rather than requiring a separate acceptance document.
+- Complete the necessary authorized work without unrelated refactoring or overwriting user changes. Investigate important ambiguity using available evidence, then ask a specific question if needed. Decide routine implementation details yourself; do not request permission already granted.
+- When asked to change rules or skills, work within the specified scope. Do not relax constraints for convenience. A review-only request calls for findings and suggestions, not replacement of active rules.
 
-## 实现与设计
+## Implementation and design
 
-- 选择满足已知功能、可靠性、安全性和运行约束的简单实现，不为假想需求添加抽象、配置层或扩展接口。
-- 先查相关现有代码和依赖。引入新库时比较适用性、维护状态、许可证及引入成本；简单局部逻辑允许自行实现，不为“复用”增加不必要依赖。
-- 让模块职责集中、接口明确。沿用仍适用的项目模式，不盲目复制已知缺陷，也不为分层而拆散相关代码。
-- 新功能先跑通从输入到结果的一条完整路径，再扩展。每阶段都应可用且可验证，不用占位逻辑或伪成功冒充完成。
-- 默认保留仍受支持的外部行为和已有数据。删除旧实现前核对调用方与数据依赖；不兼容变更遵守项目明确政策，未获授权时说明影响并确认。停止兼容旧版本、迁移数据和处理运行失败是不同决策，不能一并禁止。
-- 根据涉及的机制检查相关边界与失败路径，例如外部输入、资源释放、超时、重复执行、并发和中断后的数据状态；只处理本次相关风险，不给每个任务套完整清单。错误应可定位，不吞掉失败或返回伪成功。必要临时措施应说明限制和移除条件，保留适当的后续记录。
+- Choose the simplest implementation that satisfies known functional, reliability, security, and operating constraints. Do not add abstractions, configuration layers, or extension points for hypothetical needs.
+- Inspect relevant existing code and dependencies first. Before adding a library, consider suitability, maintenance, license, and adoption cost. Small local logic may be implemented directly; reuse should not create unnecessary dependencies.
+- Keep responsibilities focused and interfaces clear. Follow suitable project patterns without copying known defects or splitting cohesive work solely to create layers.
+- Establish one working path from input to result before expanding a new feature. Each stage should be usable and verifiable; placeholders and false success are not completion.
+- Preserve supported external behavior and existing data by default. Check callers and dependencies before removing implementations. Follow the project's compatibility policy for breaking changes; explain effects and obtain authorization when not already granted. Ending legacy support, migrating data, and handling runtime failures are separate decisions.
+- Check boundaries and failure paths relevant to the mechanism being changed: external input, resource release, timeouts, retries, concurrency, or interrupted data updates. Do not apply an exhaustive checklist to every task. Make errors diagnosable; do not swallow failures or report false success. Explain temporary measures, their limits, and removal conditions, recording useful follow-up work.
 
-## 标准、成熟实践与查证
+## Standards, established practice, and evidence
 
-- 开始设计相关行为前，先识别是否受协议、文件格式、语言、平台或依赖库约定约束，并核对项目实际使用的版本与运行环境。优先复用已核实的项目材料；缺失、存疑或可能变化时查适用的一手资料，不凭记忆填补关键行为。
-- 有正式规范时，按其适用条款实现并验证；库与平台行为以相应版本的官方约定为依据。成熟实现用于理解落地方式、边界及经验，不能代替规范，也不能把一个项目的偏好称为行业标准。发现资料、实际行为与项目要求冲突时，明确差异及影响，再决定处理方式。
-- 没有明确规范但已有成熟解决方法时，在确定关键方案前比较相关惯用做法或成熟实现，理解其成立条件、失败处理和维护代价。按当前规模与约束选择，不照搬复杂架构；简单局部逻辑可沿用已验证的项目做法，无需每次联网调研。
-- 决定自行设计或偏离适用约定时，说明现成方案为何不满足需求、影响哪些行为、如何验证。未获授权的兼容或支持范围变更仍需确认；普通实现取舍不额外设审批。对于安全敏感机制，优先使用受维护且适用的标准库或成熟组件，不自创未经验证的核心算法或协议。
-- 重要决策在相关文档或注释中保留结论、适用条件、关键来源及必要的版本或章节；未找到可靠依据时明确未知，使用相关实现、实验或测试消除关键不确定性，不编造出处或历史原因。
-- 当适用约束、关键行为和验证方法已足以支撑实现时，结束调研；仍可能改变方案的未知须保留并处理。不设置检索数量配额，不为无关细节继续搜索，也不以来源列表或“参考业界”代替方案验证。
+- Before designing relevant behavior, identify constraints from protocols, file formats, languages, platforms, and dependencies. Check the versions and environment actually used. Reuse verified project evidence; consult applicable primary sources when information is missing, uncertain, or changeable. Do not fill critical gaps from memory.
+- Implement and verify applicable formal requirements. Use the corresponding official version documentation for library and platform behavior. Mature implementations help explain practical details and edge cases; they do not replace specifications, and one project's preference is not an industry standard. Explain conflicts between sources, observed behavior, and project requirements before resolving them.
+- Where no formal specification applies but mature solutions exist, compare relevant approaches before committing to a critical design. Understand assumptions, failures, and maintenance costs. Choose for the actual scale and constraints instead of copying complex architectures. Simple local work may follow verified project practice without new web research.
+- When designing a custom solution or departing from applicable conventions, explain why existing solutions are insufficient, what behavior is affected, and how it will be verified. Unauthorized compatibility or support changes still require confirmation; routine choices do not need additional approval. For security-sensitive mechanisms, prefer maintained, suitable standard libraries or established components over unverified custom algorithms or protocols.
+- Preserve significant decisions in relevant documentation or comments, including conclusions, assumptions, key sources, and useful versions or sections. Mark missing evidence as unknown. Use implementation inspection, experiments, or tests to resolve critical uncertainty; do not invent citations or historical motives.
+- Stop research when the applicable constraints, critical behavior, and validation approach support implementation. Retain unresolved questions that could change the design. Do not impose search quotas, investigate unrelated detail, or substitute source lists for verification.
 
-## 验证与交付
+## Verification and delivery
 
-- 根据变更选择验证并执行项目规定的检查。覆盖预期行为及相关边界、失败路径；涉及规范或互操作时，使用适用的标准样例、约定测试或真实集成检查，不能只证明本实现内部自洽。修复缺陷时尽可能先重现失败，再验证修复；对可稳定自动化且有维护价值的问题补充回归测试。
-- 优先检查受影响行为；范围扩大、发现失败或项目要求时再扩大验证。不得删改正确断言、忽略失败来制造通过结果；预期行为确实改变时，依据新要求更新测试。
-- 完成前从后续维护者的角度检查实际改动：是否满足要求、引入回归或多余复杂度，关键原因和约束是否可理解，相关文档与验证是否一致。优先修复实质问题，不因个人风格偏好扩大改动。无法验证时说明原因与未覆盖范围，不宣称通过。
-- 交付时说明改了什么、验证结果及必要限制，区分计划、实现、安装、发布。可撤销日常工作不额外设审批；破坏性数据操作、发布及改写共享历史须有明确授权。
-- 不将密钥等敏感信息写入代码、文档或日志。
+- Select relevant verification and run required project checks. Cover expected behavior and relevant boundaries and failures. For standards or interoperability, use suitable reference examples, conformance checks, or actual integration tests, not only internal consistency. Reproduce defects where practical, verify the fix, and add maintainable regression tests for reliably automated cases.
+- Start with affected behavior. Expand checks when scope, failures, or project requirements justify it. Never remove correct assertions or ignore failures to manufacture a pass. If expected behavior changes, update tests based on the new requirements.
+- Before delivery, inspect the change as a future maintainer: requirements, regressions, unnecessary complexity, understandable reasons and constraints, and consistency between documentation and evidence. Fix substantive issues without expanding scope for style preferences. State verification limits; do not claim checks that did not run.
+- Report changes, verification, and material limits. Distinguish planned, implemented, installed, and released work. Reversible routine work needs no extra approval; destructive data operations, publication, and rewriting shared history require explicit authorization.
+- Do not place secrets in code, documentation, or logs.
 
-## 文档与沟通
+## Documentation and communication
 
-- 先讲清结论、原因与条件，再删重复。保留有用的标准术语，在需要处解释；不自造含糊标签，不用比喻代替机制。尊重用户语言和指定输出格式。
-- 用户说明写行为，开发说明解释机制与选择，注释解释不明显的原因。保留有助于理解和长期学习的背景，不逐行翻译代码或扩写无关教程。
-- 行为、机制或重要约束变化时，同轮更新受影响文档。维护旧文档时把本次涉及的完整段落写清楚，保留准确名称和事实，不默认重写整库。
-- 对已确认、易重犯且有长期价值的非显然问题，先查重，再记录现象、原因、处理办法及必要证据和适用条件。沿用项目经验目录；无约定时使用 `doc/值得记住的坑/`，按主题命名。省略试错流水，不删除支持结论的关键证据。
+- Follow the user's language and requested format; otherwise follow the conversation and established project language. English instructions do not require English output or bilingual output. Explain conclusions, reasons, and conditions before removing repetition. Retain useful standard terms with enough context; do not invent vague jargon or replace mechanisms with analogies.
+- User documentation explains behavior; development documentation explains mechanisms and choices; comments explain non-obvious intent. Preserve background useful for understanding and long-term learning without translating code line by line or adding unrelated tutorials.
+- Update affected documentation in the same task when behavior, mechanisms, or important constraints change. Make edited passages coherent and clear while preserving accurate names and facts; do not rewrite the whole repository by default.
+- For confirmed, non-obvious problems likely to recur and worth remembering, check for existing coverage, then record symptoms, cause, remedy, necessary evidence, and applicability. Reuse the project knowledge directory; if none exists, use `doc/值得记住的坑/` with topic-based filenames. Omit trial-and-error chronology while retaining evidence supporting conclusions.
 
-## 涉及界面时
+## When interfaces are involved
 
-- 操作应有可感知结果。即时操作可由状态变化反馈；长操作应能辨认进行中和完成，失败时说明问题与可行下一步，避免多余提示。
-- 检查受影响的键盘操作、焦点和基本可访问性，不只验证鼠标操作。
+- Give actions perceptible results. State changes can provide immediate feedback; long operations should visibly distinguish progress, completion, and failure with useful next steps. Avoid unnecessary notifications.
+- Check affected keyboard interactions, focus, and basic accessibility, not only mouse operation.
 
-项目应另行提供真实的安装与验证命令、关键目录、支持环境、兼容政策和必要操作约束。具体项目约定细化这些默认要求；发现实质冲突时结合用户授权处理，不猜测命令或默默忽略约束。
+Projects should separately provide actual installation and verification commands, key directories, supported environments, compatibility policies, and operational constraints. Project conventions refine these defaults. Resolve material conflicts using user authorization rather than guessing commands or silently dropping constraints.

@@ -1,25 +1,25 @@
 ---
 name: development-log
-description: 在项目采用开发日志规则，或用户明确要求记录变更时，整理有意义的已完成改动、原因、验证和剩余事项。维护开发日志而非聊天流水，不替代当前版本的架构与功能说明。
+description: Record meaningful completed changes, reasons, verification, and remaining work when the project adopts development log rules or the user asks for a change record. Maintain development history rather than chat transcripts; do not replace current architecture or feature documentation.
 ---
 
-# 开发日志
+# Development log
 
-让维护者了解发生过什么和当时依据，当前产品文档仍描述现状。默认位置 `doc/开发日志/`；沿用已有 CHANGELOG、开发记录或决策记录，不为相同内容建立第二份。
+Help maintainers understand what changed and the evidence available at the time. Current product documentation still describes the present. Use `doc/开发日志/` by default; reuse an existing changelog, development log, or decision record instead of duplicating it. Follow the user's requested language, otherwise the established project language. English instructions do not require English or bilingual output; preserve existing paths and identifiers.
 
-## 执行
+## Workflow
 
-1. 从本次任务、实际改动与验证结果提取值得追踪的变化。区分提议、已实现、已验证、已发布；没有事实依据不补造日期、版本、原因或验证。只有微小无行为影响的润色时无需记录。
-2. 先查相关记录并合并同一任务的未完成条目。普通变更写入 `CHANGELOG.md` 的“未发布”区，按主题说明变化、必要原因和验证限制；仅在确认发布后移入对应版本。复杂演变或重要决定可单独写 `YYYY-MM-DD-主题.md`，在索引链接；不为每个小改动另建文件。
-3. 对照当前说明检查分工：现行行为与设计理由留在当前文档；改动前后经过、废弃方案和历史结论放日志。现有正式决策记录可保留原位置并链接，不强制迁移。旧决定被替代时保留其历史状态及新决定链接，不把历史改成当前规则。
-4. 核对时间、范围、状态与证据。日志不复制整个差异、聊天、敏感信息或原始输出。不把日志写成新的待办系统；剩余问题链接现有任务记录，必要时简述即可。
+1. Extract meaningful changes from the task, actual edits, and verification. Distinguish proposed, implemented, verified, and released work. Do not invent dates, versions, reasons, or test results. Tiny wording changes without behavior effects need no entry.
+2. Check related entries and consolidate unfinished records for the same task. Put ordinary changes in the Unreleased section of `CHANGELOG.md`, explaining changes, necessary reasons, and validation limits by topic. Move them to a release only after release is confirmed. Significant history or decisions may have a dated topic file linked from the index; do not create a separate file for every small edit.
+3. Keep current behavior and design rationale in current documentation; put chronology, abandoned approaches, and historical conclusions in logs or existing decision records. Preserve and link established decision records without forcing relocation. Mark replaced decisions as superseded and link the replacement rather than rewriting history as current policy.
+4. Check dates, scope, status, and evidence. Do not copy complete diffs, chats, secrets, or raw output into logs. Logs are not another task tracker; link existing tasks for remaining work and summarize only when useful.
 
-## 内容与边界
+## Content and boundaries
 
-用自然段或少量条目写清本次变化、必要理由、验证结果及剩余限制；不要求固定标题。复用已有版本编号，不因写日志自行发布、打 tag、提交或推送。
+Use prose or a few bullets to explain changes, necessary reasons, verification, and remaining limits. No fixed headings are required. Reuse existing version numbers; writing a log does not authorize a release, tag, commit, or push.
 
-用户只要求修正措辞时，不迁移全部历史；用户要求整理旧历史时，保留原始日期和证据，缺失则注明未知。开发记录应归入完整任务，避免同一变化在索引、日记、周报、版本日志中重复。
+A wording request does not authorize historical migration. When asked to organize history, preserve original dates and evidence and mark gaps as unknown. Keep a change within its task instead of repeating it across indexes, diaries, weekly reports, and release notes.
 
-例：把“优化了保存逻辑”具体写成“保存失败时保留编辑内容，用户可重试；此前失败会清空输入。已验证正常保存和模拟失败，断电恢复尚未验证。”只有实际证据支持时才使用这些事实。不要为让日志完整而编造测试。
+Example: replace “Improved saving” with “Failed saves now preserve edited content so users can retry; previously failure cleared the input. Normal saves and simulated failures were checked; recovery after power loss remains unverified.” Use such claims only when supported; never invent tests to complete an entry.
 
-交付时复用任务总结，指出必要记录位置即可；不附固定自检报告。本技能不要求安装其他技能或扫描整库。
+At delivery, reuse the task summary and point to the record if useful. Do not append a fixed self-review report. This skill does not require other skills or a repository-wide scan.

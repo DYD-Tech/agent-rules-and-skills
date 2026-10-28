@@ -1,5 +1,7 @@
 # 真源、适配与同步
 
+简体中文 | [English](SYNC.en.md)
+
 本仓库（或用户明确选择的 fork）是可复用规则、技能及适配约定的唯一维护来源。业务项目保存锁定版本的安装结果，代理专用文件是派生结果，不是新的标准。首次安装见 [INSTALL.md](INSTALL.md)，宿主适配见 [adapters](adapters/README.md)。
 
 ## 真源是什么

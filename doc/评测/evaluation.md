@@ -67,3 +67,46 @@ agent-rules-and-skills.lock.json
 本次修改 README、INSTALL、SYNC 和当前架构说明，区分直接使用者安装升级、维护者修改发布、fork 自主管理及 PR 贡献。文档审查覆盖了仅安装、只改不推送、无写权限、PR 未合并、fork 迁移部分项目这些情形；这是作者对流程文本的核对，不是实际远端操作或独立 agent 实验。
 
 实际重新运行 8 项检查器测试，全部通过；80 个本地文件链接、代码围栏、doc 根目录约束及原备份哈希检查通过。该结果不证明授权流程会被所有 agent 正确执行；未执行 clone、fork、推送、PR 或业务项目升级。
+
+
+## 双语支持：作者试用与静态验证
+
+本次采用单一英文运行指令，中文对照在 doc/中文对照；并提供中英文使用指南。以下是本轮作者根据已读取技能完成的有限试用，输入为虚构测试材料，输出为实际编写的样例，不是业务项目变更事实，也不是独立模型实验。
+
+### 开发日志：中文请求
+
+输入：请用中文给既有 doc/开发日志/CHANGELOG.md 写一条未发布记录。任务事实是“保存失败以前会清空编辑内容，现在保留；已测正常保存和模拟失败；未测断电恢复；未发布”。不要添加日期或版本。
+
+输出：
+
+> 保存失败时保留编辑内容，用户可以重试；此前失败会清空内容。已验证正常保存和模拟失败，断电恢复尚未验证。本项尚未发布。
+
+该输出使用中文，没有把英文技能语言当作输出语言，也没有编造日期或发布状态。指定位置沿用既有路径，没有新建英文目录或另一份日志。
+
+### 开发日志：英文请求
+
+Input: Write the same unreleased change in English for the existing doc/开发日志/CHANGELOG.md. Do not invent dates or versions.
+
+Output:
+
+> Failed saves now preserve edited content so users can retry; previously, failure cleared the input. Normal saves and simulated failures were verified. Recovery after power loss remains unverified. This change has not been released.
+
+两份输出保留相同事实、验证范围与未发布状态；这属于对同一测试材料的语言试用，不需要同时安装两份技能。
+
+### 架构文档：局部英文说明
+
+Input: Use the documentation skill to draft only a short feature and implementation passage in English. The existing document is doc/架构-功能-实现/报告.md; do not rename it. Fictional evidence: report requests create database job records; a worker writes a file and then marks the job complete; unfinished jobs rerun after restart. Duplicate prevention and tests are unknown. No historical decision record is available.
+
+Output:
+
+> **Feature:** Submitting a report request creates a job record. A worker generates the file and records completion. After a restart, unfinished jobs run again; this does not establish that partial work resumes.
+>
+> **Implementation:** File creation happens before completion is recorded. If the process stops between those operations, the unfinished job may run again. The available evidence does not establish how duplicate effects are prevented or what recovery tests cover. The historical reason for this design is unknown.
+
+输出只覆盖请求段落，保留既有路径，没有开展整库建档；区分已知执行顺序、可推出的中断风险和未核实机制，没有编造测试、恢复保证或历史动机。该样例未修改实际业务文档。
+
+### 检查结果与边界
+
+实际运行 8 项已有检查器测试，全部通过。145 个本地文件链接、代码围栏、doc 根目录约束、原备份哈希、目录 JSON、模块 ID 唯一性、安装路径及中文对照覆盖检查通过。技能入口的 name/description 做了基础检查。skill-creator 的 quick_validate.py 因当前 Python 缺少 PyYAML 未能运行，不能报告完整 YAML 验证通过。
+
+人工对照中英文关键要求：规则适用范围、按需读取、授权、触发、失败处理、源仓库与安装副本的区分均保留。上述样例验证作者本次能按英文指令生成指定语言，不能证明所有 agent 都能做到，也未测量 token、延迟或跨宿主加载。未安装到其他项目或个人环境。

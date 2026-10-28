@@ -17,3 +17,5 @@
 安装范围与跨代理适配见 [项目优先安装设计](设计/project-first-installation.md)。
 
 多项目与多代理的一致性见 [唯一真源设计](设计/single-source-maintenance.md)。
+
+双语使用入口见 [English README](../README.en.md)；运行规则与技能的中文阅读版本及同步维护要求见 [中文对照](中文对照/README.md)。历史研究与备份保持原文。

@@ -1,45 +1,45 @@
-# 内容要求与示例
+# Content requirements and examples
 
-创建或实质改写页面时按相关层次使用。以下是读者需要得到的答案，不是固定的必填标题；信息可合并成自然段，不适用的内容省略。
+Use the relevant layer when creating or substantially rewriting a page. These are questions readers need answered, not mandatory headings. Combine information into prose and omit inapplicable detail.
 
-## 架构总览
+## Architecture overview
 
-默认页面为 `00-总览与分层.md`。先说明软件用途、使用者和系统边界，再解释主要部分、职责和关系。一条代表性的流程应让读者理解输入如何成为结果，必要时用简短关系图并标明箭头含义。不要仅画无说明的盒子。
+The default page is `00-总览与分层.md`. Explain purpose, users, and system boundaries, followed by major parts, responsibilities, and relationships. A representative flow should show how input becomes a result. Use a small diagram when helpful, explaining arrow meanings rather than presenting unexplained boxes.
 
-解释影响设计的约束和核心选择：为什么如此分工，解决什么问题，承担什么成本，条件改变后何时需要重选。数据库、外部服务、部署与恢复方式仅在影响理解时展开。技术栈和文件夹是定位信息，不能代替架构。
+Explain constraints and central choices: why responsibilities are divided this way, what problem that solves, its costs, and when changing conditions would require another choice. Expand on databases, external services, deployment, and recovery only when useful to understanding. Technology lists and directory trees locate things; they do not explain architecture.
 
-总览可以链接专题，不要求所有知识挤在同一页。无需为简单系统强行引入多层架构或多个图。图与正文发生变化时一起核对。
+Link focused topics instead of squeezing all knowledge onto one page. Simple systems need neither forced layers nor multiple diagrams. Check diagrams and prose together when either changes.
 
-## 功能全貌与功能段
+## Feature index and feature sections
 
-默认索引为 `01-功能全貌.md`；已有 README 能承担同样职责时直接复用。按用户目标列出各项能力、用途和详细说明入口，覆盖不完整时说明未核实范围；未实现计划放在需求或任务记录，可链接但不列为当前能力。
+The default index is `01-功能全貌.md`; reuse an existing README if it serves the purpose. Organize capabilities, purposes, and detailed references by user goals. State unverified coverage. Plans belong in requirements or tasks and may be linked, but are not current capabilities.
 
-具体功能解释：谁在什么场景使用，输入什么，得到什么结果，关键默认或限制，失败后怎么办。实际存在多条不同路径时解释差异。后台、命令行和库的调用也属于功能，不以“有没有界面”判断。
+For a feature, explain who uses it, in what situation, with what inputs and results, important defaults or limits, and failure recovery. Explain distinct paths when they actually exist. Background operations, command-line use, and library calls count as features too.
 
-功能段避免无关类名与模块名，但保留用户实际需要识别的命令、配置项和产品名称。不要列每个按钮，不把内部模块清单当成功能全貌。
+Avoid irrelevant class and module names in feature descriptions, while preserving commands, configuration keys, and product names users need. Do not list every button or mistake internal modules for the complete feature set.
 
-## 实现段
+## Implementation sections
 
-接在功能段之后；长篇可链接独立实现页。说明从入口到结果的一条关键路径、必要的状态或数据变化、主要模块如何协作、决定成败的约束。解释为什么需要这些机制，而不是逐行翻译源码。
+Follow the feature section or link a separate page for long explanations. Describe a critical path from entry to result, necessary state or data changes, collaborating modules, and constraints that determine success. Explain why the mechanisms are needed instead of translating code line by line.
 
-选择值得学习的因果关系：具体问题如何导致某种机制；该机制有什么代价，什么条件下可复用或不该复用。基于当前实现分析的收益和有记录的历史理由要区分。
+Select useful causal relationships: how a specific problem motivates a mechanism, what it costs, and when it can or should not be reused. Distinguish analysis of current benefits from documented historical reasons.
 
-为重要事实提供适量入口：相关源码路径与符号、测试或实测结果、设计记录或一手资料。只记录已确认的验证覆盖与限制，不要求公开全部执行日志。不要因缺少证据编写貌似完整的结论。
+Provide enough evidence references for important facts: source paths and symbols, tests or measurements, decision records, or primary sources. State only confirmed validation coverage and limits; do not publish all execution logs or invent completeness when evidence is missing.
 
-## 跨功能知识、历史与经验
+## Shared knowledge, history, and lessons
 
-共享机制在总览或专题维护一次。功能只解释如何使用及差异，并链接共享内容。独立架构决策记录只用于重要且需追溯的选择，包含背景、选择、状态和后果，放在开发日志或既有决策目录。当前页面只保留现行理由及必要链接；没有这样的需求不新建目录。
+Maintain shared mechanisms once in the overview or a topic page. Features explain their use and differences, linking shared material. Separate architectural decision records are for significant choices requiring traceability; include context, choice, status, and consequences in the development log or an existing decision directory. Current pages retain current rationale and useful links. Do not create a directory without such a need.
 
-排错经验沿用项目知识库，记录已确认的现象、原因、办法和适用条件。架构或功能页保留影响设计的结论与链接，不复制完整排查史。必要的推断证据保留，未经确认的原因注明未知。
+Reuse the project knowledge base for confirmed troubleshooting symptoms, causes, remedies, and applicability. Architecture and feature pages keep relevant design conclusions and links rather than full investigation history. Preserve necessary evidence and mark unconfirmed causes as unknown.
 
-## 示例：后台生成报告
+## Example: background report generation
 
-以下为虚构设计，用于说明阅读深度，不能复制为真实项目事实。
+This fictional design illustrates explanatory depth. Do not copy it as a real project fact.
 
-**架构：** 界面接收请求并展示结果，后台任务生成报告，数据库保存任务状态。生成过程较慢，因此独立执行，避免阻塞界面；状态落库让重启后能找到未完成任务。代价是需要维护任务领取和恢复逻辑。若操作很快且失败后重新开始成本低，直接执行可能足够。
+**Architecture:** The interface accepts requests and displays results, background jobs generate reports, and the database stores job state. Slow generation runs independently to keep the interface responsive; persistent state makes unfinished jobs discoverable after a restart. This requires job-claiming and recovery logic. Fast operations that are cheap to restart may need only direct execution.
 
-**功能：** 用户提交后获得任务记录，可以继续操作软件。成功后获取报告；失败后查看原因并重试。这个设计在重启后重新执行未完成任务，不承诺从上次进度继续。
+**Feature:** Submitting a request creates a job record, and users may continue working. They retrieve a report on success or inspect the failure and retry. This design restarts unfinished jobs after a restart; it does not promise to resume partial progress.
 
-**实现与知识：** 文件生成后、任务状态写回前若进程退出，恢复后可能再次执行。因此必须确定重复执行会不会产生额外结果。让同一任务重复执行仍产生一致结果，称为幂等性。稳定任务标识可以用于识别已有结果，但如何避免并发重复仍取决于具体存储与领取方式。真实文档须说明实际采用的办法和验证依据，不能从“有队列”推断“绝不重复”。
+**Implementation and knowledge:** If a process exits after generating a file but before recording completion, recovery may execute the job again. The design must establish whether repetitions create extra effects. Producing a consistent result when the same job repeats is called idempotency. Stable job identifiers can identify existing results, but preventing concurrent duplicates still depends on storage and claiming mechanisms. Real documentation must describe the actual solution and its evidence; a queue alone does not imply that duplicates are impossible.
 
-这些解释无需代码也能读懂；真实项目另附准确源码及验证入口。没有理由在功能段展开幂等机制，也不能在实现段只写“使用异步架构，提升稳定性”。
+These explanations are understandable without code; real projects should add accurate source and verification references. The feature section need not explain idempotency internals, while the implementation section needs more than “an asynchronous architecture improves stability.”
