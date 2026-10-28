@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "modules": [
+    {
+      "id": "development",
+      "name": "通用规则",
+      "aliases": [
+        "通用开发规则"
+      ],
+      "tags": [
+        "开发",
+        "质量",
+        "标准"
+      ],
+      "summary": "以认真维护项目的团队为标准，明确实现、查证、验证和协作要求。",
+      "source": {
+        "type": "bundled"
+      },
+      "rule_paths": [
+        "rules/development.md"
+      ],
+      "skill_paths": [],
+      "requires": [],
+      "suggests": [],
+      "activation": {
+        "rules": "每次任务读取并应用",
+        "skills": []
+      }
+    },
+    {
+      "id": "architecture-features-implementation",
+      "name": "架构—功能—实现",
+      "aliases": [
+        "架构功能实现",
+        "架构-功能-实现"
+      ],
+      "tags": [
+        "文档",
+        "架构",
+        "学习"
+      ],
+      "summary": "维护当前版本的三层说明，按需解释机制和设计知识。",
+      "source": {
+        "type": "bundled"
+      },
+      "rule_paths": [
+        "rules/architecture-features-implementation.md"
+      ],
+      "skill_paths": [
+        "skills/architecture-features-implementation"
+      ],
+      "requires": [],
+      "suggests": [],
+      "activation": {
+        "rules": "每次任务读取并应用",
+        "skills": [
+          {
+            "name": "architecture-features-implementation",
+            "when": "创建、补齐或实质更新架构、功能、实现文档时"
+          }
+        ]
+      }
+    },
+    {
+      "id": "development-log",
+      "name": "开发日志",
+      "aliases": [
+        "变更日志"
+      ],
+      "tags": [
+        "历史",
+        "变更",
+        "日志"
+      ],
+      "summary": "按任务记录有意义的变化、原因与验证，和当前说明分开。",
+      "source": {
+        "type": "bundled"
+      },
+      "rule_paths": [
+        "rules/development-log.md"
+      ],
+      "skill_paths": [
+        "skills/development-log"
+      ],
+      "requires": [],
+      "suggests": [],
+      "activation": {
+        "rules": "每次任务读取并应用",
+        "skills": [
+          {
+            "name": "development-log",
+            "when": "有值得追踪的已完成变更或用户明确要求记录时"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dyd-tech/clear-communication",
+      "name": "清晰沟通",
+      "aliases": [
+        "clear-communication",
+        "communication-skills"
+      ],
+      "tags": [
+        "沟通",
+        "写作",
+        "表达"
+      ],
+      "summary": "应用外部 clear-communication 技能提高输出清晰度；不镜像其源码。",
+      "source": {
+        "type": "github",
+        "repo": "https://github.com/DYD-Tech/communication-skills",
+        "ref": "33c284f4fbe5941f7e97d707149cfaf1fd6c84ad",
+        "verification": "2026-10-28 git ls-remote 已核对该提交为上游 main；完整内容与宿主行为在安装时另行核验"
+      },
+      "rule_paths": [],
+      "skill_paths": [
+        "skills/clear-communication"
+      ],
+      "requires": [],
+      "suggests": [],
+      "activation": {
+        "rules": null,
+        "skills": [
+          {
+            "name": "clear-communication",
+            "when": "每次任务；短答轻量检查，复杂内容按技能执行"
+          }
+        ]
+      }
+    }
+  ]
+}
