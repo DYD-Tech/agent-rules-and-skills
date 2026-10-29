@@ -20,3 +20,5 @@ For mixed instruction files, register only the managed block using role `entry-b
 The checker cannot establish semantic equivalence, publication status, authenticity of claimed provenance, or upstream freshness. It cannot discover unregistered copies outside managed roots. Installers must verify sources; a clean result does not replace source comparison. For personal scope, use a separately identified installation root rather than managing the whole home directory.
 
 Before migrating legacy records, recover original provenance and the installation baseline. Do not recompute current hashes to erase unknown drift. Language does not change this schema: record canonical runtime files, not Chinese reading copies.
+
+For external modules also record `version_policy`, `requested_ref`, `resolved_at` (UTC query time), and actual `source_commit`. A branch name cannot replace source_commit; reproduce by commit. Checking without installing does not change the lock record. The same catalog commit may resolve to different external commits; compare both independently.

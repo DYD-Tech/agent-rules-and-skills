@@ -49,7 +49,7 @@ Usage documentation is available in Chinese and English. Distributable rules, sk
 
 Ask an agent to “Compare these modules with their recorded source” or “Update installed modules from the selected source, preserving and explaining conflicts.” Follow [SYNC.en.md](SYNC.en.md). A check-only request does not authorize updates; routine development does not check the network every turn.
 
-Source repositories maintain content. Project files are installations of pinned versions; host adaptation handles necessary format and loading differences only. Keep project requirements separate. Return reusable improvements to the source before redistribution and record temporary patches as pending upstream work. The catalog pins external skill versions; their upstream repositories still own the source. Fork users select their own standard without automatic fallback to the original repository.
+Source repositories maintain content. Project files are installations of pinned versions; host adaptation handles necessary format and loading differences only. Keep project requirements separate. Return reusable improvements to the source before redistribution and record temporary patches as pending upstream work. The catalog selects external sources and version policies: Clear communication resolves current main on first install or explicit upgrade, then pins that commit in project records. Ordinary reinstalls and routine work retain the installed version. Upstream repositories still own the source. Fork users select their own standard without automatic fallback to the original repository.
 
 The [read-only checker](tools/audit_installation.py) detects registered files changed since installation:
 
@@ -61,7 +61,7 @@ Run it from this repository with the actual target project path. Do not fabricat
 
 ## Recommended installation scope
 
-Keep selected rules, complete skills, activation instructions, and provenance in the project under version control. Skills need not be personal installations. Adapt project loading for the agents actually used. Store derived files in a project directory supported by the primary host; preserve a working existing layout. Central adaptation guidance lives in [adapters](adapters/README.en.md).
+Keep selected rules, complete skills, activation instructions, and provenance in the project under version control. For new installations, verify and prefer `.agents/skills/` and `.agent-rules/agent-rules-and-skills/`; use host-specific locations only when shared directories cannot meet host requirements. Migrate existing installations only within authorization, checking duplicate loading rather than blindly adding copies. See [installation](INSTALL.en.md) and [adaptation](adapters/README.en.md).
 
 If a host lacks project skills, check supported path configuration or plain-text instruction loading. Explain limitations and obtain any missing scope authorization before using personal or account installation; project requirements must not silently become global policy. The detailed [project-first design](doc/设计/project-first-installation.md) is currently in Chinese.
 

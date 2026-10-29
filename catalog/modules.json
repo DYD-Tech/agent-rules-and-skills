@@ -130,8 +130,9 @@
       "source": {
         "type": "github",
         "repo": "https://github.com/DYD-Tech/communication-skills",
-        "ref": "33c284f4fbe5941f7e97d707149cfaf1fd6c84ad",
-        "verification": "2026-10-28: git ls-remote verified this commit as upstream main; complete content and host behavior require separate installation-time verification."
+        "ref": "refs/heads/main",
+        "verification": "2026-10-29: remote main resolved to d3ff615458ae3c608e1e17fb514080cea6716783. Historical evidence only: resolve again at first install or explicit upgrade; verify content and host loading separately.",
+        "version_policy": "track-branch"
       },
       "rule_paths": [],
       "skill_paths": [

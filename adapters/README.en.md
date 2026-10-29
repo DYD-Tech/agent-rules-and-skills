@@ -6,7 +6,7 @@ Maintain host loading differences here. Standard content remains in `rules/` and
 
 ## Adaptation order
 
-1. Use officially supported project skill directories or path configuration unchanged; share files when possible.
+1. Verify and prefer `.agents/skills/` and `.agent-rules/agent-rules-and-skills/`. Do not choose proprietary directories by brand when shared discovery works. Use host-specific paths only when needed, recording evidence. Distinguish native discovery from file reading; migrate existing installs within authorization and check shadowing instead of blindly keeping both copies.
 2. Add a thin project entry point referencing the same rules. Prefer AGENTS.md as a shared entry, without assuming every client, mode, or version reads it.
 3. Convert necessary metadata or invocation syntax only when native requirements demand it, preserving complete resources. Record original and target fields, reasons, host version, and affected capabilities.
 4. If equivalent expression is impossible, report lost capabilities and stop that host adaptation if necessary. Do not delete conditions, abbreviate steps, or change triggers to make files appear compatible.
@@ -27,3 +27,5 @@ Language is not a reason to rewrite the installed skill. Runtime instructions re
 | TRAE | Official skills page located, but retrieval returned no body; rules page timed out | Paths, format, and automatic activation remain unverified. Check current official or local evidence at installation; do not infer support from other agents. [Skills page](https://docs.trae.ai/ide/skills) |
 
 Add equivalent evidence for other agents. Reading documentation is not client testing. Matching SKILL.md filenames do not establish identical metadata, tool support, or invocation semantics.
+
+2026-10-29 user report: their Qoder environment also recognizes `.agents/skills/`. Thus `.qoder/skills/` is not the only candidate. Version and mode were not recorded, so this is not a guarantee for all Qoder environments. Verify the shared directory first.
