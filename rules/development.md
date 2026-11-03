@@ -45,7 +45,7 @@ The following rules make these goals actionable while preserving task scope and 
 - Follow the user's language and requested format; otherwise follow the conversation and established project language. English instructions do not require English output or bilingual output. Explain conclusions, reasons, and conditions before removing repetition. Retain useful standard terms with enough context; do not invent vague jargon or replace mechanisms with analogies.
 - User documentation explains behavior; development documentation explains mechanisms and choices; comments explain non-obvious intent. Preserve background useful for understanding and long-term learning without translating code line by line or adding unrelated tutorials.
 - Update affected documentation in the same task when behavior, mechanisms, or important constraints change. Make edited passages coherent and clear while preserving accurate names and facts; do not rewrite the whole repository by default.
-- For confirmed, non-obvious problems likely to recur and worth remembering, check for existing coverage, then record symptoms, cause, remedy, necessary evidence, and applicability. Reuse the project knowledge directory; if none exists, use `doc/值得记住的坑/` with topic-based filenames. Omit trial-and-error chronology while retaining evidence supporting conclusions.
+- For confirmed, non-obvious problems likely to recur and worth remembering, check for existing coverage, then record symptoms, cause, remedy, necessary evidence, and applicability. Reuse the project knowledge directory; if none exists, use `doc/值得记住的坑/` (Chinese) or `doc/lessons-learned/` (English) with topic-based filenames. Omit trial-and-error chronology while retaining evidence supporting conclusions.
 
 ## When interfaces are involved
 
@@ -53,3 +53,5 @@ The following rules make these goals actionable while preserving task scope and 
 - Check affected keyboard interactions, focus, and basic accessibility, not only mouse operation.
 
 Projects should separately provide actual installation and verification commands, key directories, supported environments, compatibility policies, and operational constraints. Project conventions refine these defaults. Resolve material conflicts using user authorization rather than guessing commands or silently dropping constraints.
+
+Directory naming: honor an explicit project naming preference, then existing equivalent locations; for newly needed categories without an established name, use Chinese names in Chinese-language projects and English names in English-language projects. A single reply in another language does not change the project convention. Do not create both language trees or rename existing paths without a migration request. Keep standard entry names and shared paths such as README.md, AGENTS.md, doc/, tools/, agent-workspace/, ref/, and tasks-and-prompt/ unchanged. For other project languages, follow the user’s naming preference and existing conventions.

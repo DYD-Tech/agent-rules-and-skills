@@ -12,7 +12,7 @@ Distinguish current capabilities, explicit plans, and unverified areas. Current 
 
 Create or correct the overall architecture and feature index first, then add feature and implementation detail by importance. Reuse equivalent files. Do not move user documents or break links solely to match suggested names.
 
-Defaults are `00-总览与分层.md` and `01-功能全貌.md`. Describe behavior before implementation. One page may cover closely related capabilities; large features may span pages if the index remains navigable. Explain shared mechanisms once.
+Defaults are `00-总览与分层.md` (Chinese) or `00-overview.md` (English) and `01-功能全貌.md` (Chinese) or `01-features.md` (English). Describe behavior before implementation. One page may cover closely related capabilities; large features may span pages if the index remains navigable. Explain shared mechanisms once.
 
 Preserve the user's directory organization when it differs from defaults, applying the same three-layer responsibilities rather than redesigning folders.
 
@@ -23,3 +23,5 @@ Work by independent topic: make the core picture readable before expanding mecha
 Where historical evidence is absent, describe current structure and observable consequences without inventing motives. Distinguish plans and history; preserve valuable replaced decisions with links to their replacements.
 
 Finally check the reader's route: can readers understand the whole, find important capabilities, and understand key mechanisms and tradeoffs without code? Check affected content and links. Do not create empty pages, uniformly refresh dates, or score the entire repository to demonstrate completion.
+
+Directory naming: honor an explicit project naming preference, then existing equivalent locations; for newly needed categories without an established name, use Chinese names in Chinese-language projects and English names in English-language projects. A single reply in another language does not change the project convention. Do not create both language trees or rename existing paths without a migration request. Keep standard entry names and shared paths such as README.md, AGENTS.md, doc/, tools/, agent-workspace/, ref/, and tasks-and-prompt/ unchanged. For other project languages, follow the user’s naming preference and existing conventions.

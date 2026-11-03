@@ -4,7 +4,7 @@ Use the relevant layer when creating or substantially rewriting a page. These ar
 
 ## Architecture overview
 
-The default page is `00-总览与分层.md`. Explain purpose, users, and system boundaries, followed by major parts, responsibilities, and relationships. A representative flow should show how input becomes a result. Use a small diagram when helpful, explaining arrow meanings rather than presenting unexplained boxes.
+The default page is `00-总览与分层.md` (Chinese) or `00-overview.md` (English). Explain purpose, users, and system boundaries, followed by major parts, responsibilities, and relationships. A representative flow should show how input becomes a result. Use a small diagram when helpful, explaining arrow meanings rather than presenting unexplained boxes.
 
 Explain constraints and central choices: why responsibilities are divided this way, what problem that solves, its costs, and when changing conditions would require another choice. Expand on databases, external services, deployment, and recovery only when useful to understanding. Technology lists and directory trees locate things; they do not explain architecture.
 
@@ -12,7 +12,7 @@ Link focused topics instead of squeezing all knowledge onto one page. Simple sys
 
 ## Feature index and feature sections
 
-The default index is `01-功能全貌.md`; reuse an existing README if it serves the purpose. Organize capabilities, purposes, and detailed references by user goals. State unverified coverage. Plans belong in requirements or tasks and may be linked, but are not current capabilities.
+The default index is `01-功能全貌.md` (Chinese) or `01-features.md` (English); reuse an existing README if it serves the purpose. Organize capabilities, purposes, and detailed references by user goals. State unverified coverage. Plans belong in requirements or tasks and may be linked, but are not current capabilities.
 
 For a feature, explain who uses it, in what situation, with what inputs and results, important defaults or limits, and failure recovery. Explain distinct paths when they actually exist. Background operations, command-line use, and library calls count as features too.
 
@@ -43,3 +43,5 @@ This fictional design illustrates explanatory depth. Do not copy it as a real pr
 **Implementation and knowledge:** If a process exits after generating a file but before recording completion, recovery may execute the job again. The design must establish whether repetitions create extra effects. Producing a consistent result when the same job repeats is called idempotency. Stable job identifiers can identify existing results, but preventing concurrent duplicates still depends on storage and claiming mechanisms. Real documentation must describe the actual solution and its evidence; a queue alone does not imply that duplicates are impossible.
 
 These explanations are understandable without code; real projects should add accurate source and verification references. The feature section need not explain idempotency internals, while the implementation section needs more than “an asynchronous architecture improves stability.”
+
+Directory naming: honor an explicit project naming preference, then existing equivalent locations; for newly needed categories without an established name, use Chinese names in Chinese-language projects and English names in English-language projects. A single reply in another language does not change the project convention. Do not create both language trees or rename existing paths without a migration request. Keep standard entry names and shared paths such as README.md, AGENTS.md, doc/, tools/, agent-workspace/, ref/, and tasks-and-prompt/ unchanged. For other project languages, follow the user’s naming preference and existing conventions.

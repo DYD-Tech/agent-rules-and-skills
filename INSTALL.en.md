@@ -18,7 +18,7 @@ Identify modules, target project or personal scope, host agent, and version from
 
 Determine ownership scope, actual host and session environment (local, remote, container, or cloud), native skill discovery, and project-instruction support. A model name is not a host. Do not change explicitly requested project scope merely because a client supports only personal installation.
 
-Resolve `requires` recursively, deduplicate, and detect unknown IDs, cycles, and version conflicts. Explain additional necessary dependencies. `suggests` only recommends. The current four modules have no mandatory dependencies. General development plus Architecture–Features–Implementation yields two rule files and one skill, not rewritten rules merged into a new policy.
+Resolve `requires` recursively, deduplicate, and detect unknown IDs, cycles, and version conflicts. Explain additional necessary dependencies. `suggests` only recommends. The current five modules have no mandatory dependencies. General development plus Architecture–Features–Implementation yields two rule files and one skill, not rewritten rules merged into a new policy.
 
 ## 2. Fetch and inspect selected versions
 
@@ -82,3 +82,5 @@ Verify complete resources, module selection, paths, loading, and dependencies. C
 ## Manual installation
 
 Download the selected version, copy rules from `rule_paths` and complete skill directories from `skill_paths`; fetch external items from their recorded upstreams. Configure project or personal loading, preserve provenance and records, and verify as above. Manual and agent installation share one catalog and the same module content.
+
+For project-structure, apply rules during routine file placement and invoke the skill for initialization, layout adoption, or requested reorganization only. Installing this module does not authorize a full repository migration or modification of user originals in doc/tasks-and-prompt/.

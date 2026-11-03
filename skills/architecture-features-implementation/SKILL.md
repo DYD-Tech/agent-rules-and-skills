@@ -5,7 +5,7 @@ description: Create or maintain architecture, feature, and implementation docume
 
 # Architecture–features–implementation
 
-Help readers understand the software, design, and reusable knowledge without reading code line by line. Verify relevant implementation and evidence; fluent prose is not a substitute for facts. Follow the user's requested language, otherwise the established project language and document locations. English instructions do not require English or bilingual output. Preserve existing paths and identifiers; default to `doc/架构-功能-实现/` when no location is established.
+Help readers understand the software, design, and reusable knowledge without reading code line by line. Verify relevant implementation and evidence; fluent prose is not a substitute for facts. Follow the user's requested language, otherwise the established project language and document locations. English instructions do not require English or bilingual output. Preserve existing paths and identifiers; default to `doc/架构-功能-实现/` (Chinese) or `doc/architecture-features-implementation/` (English) when no location is established.
 
 ## Choose the scope
 
@@ -25,7 +25,7 @@ Reuse applicable material already in context. Load only necessary references. Th
 
 Explain overall architecture centrally and link focused topics. Put feature behavior before implementation. Explain shared knowledge once. Organize features around user goals, not every button or code file. Reuse an equivalent existing structure.
 
-These pages describe the currently supported version. Put intended behavior and unimplemented proposals in existing requirements or task records; put dated chronology, previous implementations, and replaced decisions in development logs or existing decision records, defaulting to `doc/开发日志/`. Retain reasons and limits needed to explain the present. Link history without accumulating it on current pages. This does not require installing the log skill or migrating unrelated history.
+These pages describe the currently supported version. Put intended behavior and unimplemented proposals in existing requirements or task records; put dated chronology, previous implementations, and replaced decisions in development logs or existing decision records, defaulting to `doc/开发日志/` (Chinese) or `doc/development-log/` (English). Retain reasons and limits needed to explain the present. Link history without accumulating it on current pages. This does not require installing the log skill or migrating unrelated history.
 
 ## Workflow
 
@@ -52,3 +52,5 @@ Edit coherent passages touched by the task and necessary adjacent text. Preserve
 - Readers can explain the relevant collaboration, choices, and limits without reading source code.
 
 Fix specific defects and stop. Report documentation changes and necessary unknowns using the existing task summary, without another review report. For broad authorized work, finish all agreed batches; if blocked, identify what remains.
+
+Directory naming: honor an explicit project naming preference, then existing equivalent locations; for newly needed categories without an established name, use Chinese names in Chinese-language projects and English names in English-language projects. A single reply in another language does not change the project convention. Do not create both language trees or rename existing paths without a migration request. Keep standard entry names and shared paths such as README.md, AGENTS.md, doc/, tools/, agent-workspace/, ref/, and tasks-and-prompt/ unchanged. For other project languages, follow the user’s naming preference and existing conventions.

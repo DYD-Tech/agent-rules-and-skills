@@ -7,6 +7,7 @@
 | 模块 ID | 可用中文名称 | 包含内容 | 来源 |
 | --- | --- | --- | --- |
 | development | 通用规则 | 一份规则 | 本仓库 |
+| project-structure | 项目仓库结构、项目结构 | 规则＋技能 | 本仓库 |
 | architecture-features-implementation | 架构功能实现、架构—功能—实现 | 规则＋技能 | 本仓库 |
 | development-log | 开发日志 | 规则＋技能 | 本仓库 |
 | dyd-tech/clear-communication | 清晰沟通、communication-skills | 每次任务应用规则＋完整技能 | 外部：DYD-Tech/communication-skills |

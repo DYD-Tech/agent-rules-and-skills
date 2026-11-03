@@ -5,7 +5,7 @@ description: Record meaningful completed changes, reasons, verification, and rem
 
 # Development log
 
-Help maintainers understand what changed and the evidence available at the time. Current product documentation still describes the present. Use `doc/开发日志/` by default; reuse an existing changelog, development log, or decision record instead of duplicating it. Follow the user's requested language, otherwise the established project language. English instructions do not require English or bilingual output; preserve existing paths and identifiers.
+Help maintainers understand what changed and the evidence available at the time. Current product documentation still describes the present. Use `doc/开发日志/` (Chinese) or `doc/development-log/` (English) by default; reuse an existing changelog, development log, or decision record instead of duplicating it. Follow the user's requested language, otherwise the established project language. English instructions do not require English or bilingual output; preserve existing paths and identifiers.
 
 ## Workflow
 
@@ -23,3 +23,5 @@ A wording request does not authorize historical migration. When asked to organiz
 Example: replace “Improved saving” with “Failed saves now preserve edited content so users can retry; previously failure cleared the input. Normal saves and simulated failures were checked; recovery after power loss remains unverified.” Use such claims only when supported; never invent tests to complete an entry.
 
 At delivery, reuse the task summary and point to the record if useful. Do not append a fixed self-review report. This skill does not require other skills or a repository-wide scan.
+
+Directory naming: honor an explicit project naming preference, then existing equivalent locations; for newly needed categories without an established name, use Chinese names in Chinese-language projects and English names in English-language projects. A single reply in another language does not change the project convention. Do not create both language trees or rename existing paths without a migration request. Keep standard entry names and shared paths such as README.md, AGENTS.md, doc/, tools/, agent-workspace/, ref/, and tasks-and-prompt/ unchanged. For other project languages, follow the user’s naming preference and existing conventions.

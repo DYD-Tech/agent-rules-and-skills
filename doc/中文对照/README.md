@@ -20,7 +20,10 @@ These are Chinese reading counterparts, not additional installable rules or skil
 
 - 行为变更先明确规范运行内容，并在同一任务更新对应中文文本；不要让翻译成为独立政策。发现冲突时以规范文件为准，修复对照。
 - README、INSTALL、SYNC、catalog 的指南与记录格式、adapters 的中英文版本同轮维护；核对范围、条件、授权、失败处理、触发和未验证限制，不以段落数量证明等义。
-- 已有路径保持不变，不因语言选择迁移用户文档；中文默认目录名是路径约定，不限制文档语言。历史调研、备份及旧评测保留原文，不要求追溯翻译。
+- 已有路径保持不变，不因语言选择迁移用户文档；新建分类按项目语言选中文或英文名称，标准入口与通用目录名不翻译。历史调研、备份及旧评测保留原文，不要求追溯翻译。
 - 技能运行时不加载本目录；需要中文例子时也不能把整个开发文档目录作为技能依赖。
 
 For behavioral changes, update canonical instructions and the matching Chinese text in the same task. Canonical runtime files govern discrepancies. Keep paired usage guides aligned on scope, conditions, permissions, failure handling, activation, and verification limits. Preserve existing paths and historical records. Do not load this directory at skill runtime.
+
+- [Project structure rules](../../rules/project-structure.md) / [结构规则中文对照](rules/project-structure.md)
+- [Project structure skill](../../skills/project-structure/SKILL.md) / [结构技能中文对照](skills/project-structure/SKILL.md)

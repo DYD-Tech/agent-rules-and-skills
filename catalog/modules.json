@@ -33,6 +33,45 @@
       }
     },
     {
+      "id": "project-structure",
+      "name": "Project repository structure",
+      "aliases": [
+        "项目仓库结构",
+        "项目结构",
+        "仓库结构",
+        "project-structure"
+      ],
+      "tags": [
+        "structure",
+        "documentation",
+        "workspace",
+        "目录",
+        "文档",
+        "临时文件"
+      ],
+      "summary": "Organize common repository paths, isolate disposable agent work, and preserve user-supplied task originals without treating them as ongoing policy.",
+      "source": {
+        "type": "bundled"
+      },
+      "rule_paths": [
+        "rules/project-structure.md"
+      ],
+      "skill_paths": [
+        "skills/project-structure"
+      ],
+      "requires": [],
+      "suggests": [],
+      "activation": {
+        "rules": "Apply during ordinary file creation and editing; no per-task repository scan",
+        "skills": [
+          {
+            "name": "project-structure",
+            "when": "When initializing, adopting common structure, or explicitly reorganizing repository directories"
+          }
+        ]
+      }
+    },
+    {
       "id": "architecture-features-implementation",
       "name": "Architecture–Features–Implementation",
       "aliases": [

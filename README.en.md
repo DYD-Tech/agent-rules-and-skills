@@ -35,6 +35,7 @@ Start with the [catalog](catalog/README.en.md), [machine-readable manifest](cata
 | Module | Installation | Source |
 | --- | --- | --- |
 | General development | Development rules | This repository |
+| Project repository structure | Common layout rules and initialization/reorganization skill | This repository |
 | Architecture–Features–Implementation | Current-version documentation rules and skill | This repository |
 | Development log | Change-record rules and skill | This repository |
 | Clear communication | Every-task activation and clear-communication skill | [External upstream](https://github.com/DYD-Tech/communication-skills) |
@@ -76,3 +77,5 @@ Use the [manual procedure](INSTALL.en.md#manual-installation): copy the selected
 - Other `doc/` research, design, and evaluation records explain development of these modules and are not loaded during normal skill use. These records are currently in Chinese.
 
 See the [feature overview](doc/架构-功能-实现/01-功能全貌.md), [modular design](doc/设计/module-installation-design.md), and [evaluation record](doc/评测/evaluation.md). Skills cannot guarantee model compliance or replace testing and access controls. This repository has not been installed into a personal global environment, and cross-host installation tests remain incomplete.
+
+Name new documentation categories in the project language: Chinese for Chinese-language projects and English for English-language projects. Existing paths do not change merely because the conversation language changes.

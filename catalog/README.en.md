@@ -7,6 +7,7 @@ A module is a selectable installation unit containing rules, skills, or both. Ex
 | Module ID | English name | Contents | Source |
 | --- | --- | --- | --- |
 | development | General development | One rule file | Bundled |
+| project-structure | Project repository structure | Rules and skill | Bundled |
 | architecture-features-implementation | Architecture–Features–Implementation | Rules and skill | Bundled |
 | development-log | Development log | Rules and skill | Bundled |
 | dyd-tech/clear-communication | Clear communication | Every-task activation and complete skill | DYD-Tech/communication-skills |

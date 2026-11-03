@@ -1,7 +1,9 @@
 # Development log rules
 
-- For meaningful completed changes to features, behavior, structure, constraints, or important fixes, apply the configured `development-log` skill within the same delivery. Maintain `doc/开发日志/` or reuse an existing equivalent. Minor wording changes do not require entries.
+- For meaningful completed changes to features, behavior, structure, constraints, or important fixes, apply the configured `development-log` skill within the same delivery. Maintain `doc/开发日志/` (Chinese) or `doc/development-log/` (English) or reuse an existing equivalent. Minor wording changes do not require entries.
 - Record what changed, why, verification, and necessary remaining work. Consolidate by task or topic, not every tool call, message, or code difference. Plans are not completed work; completion is not publication.
 - Architecture–features–implementation documentation describes the currently supported version, preserving reasons and limits needed to understand it. Put dated chronology, previous implementations, and superseded decisions in development logs or existing historical records, using links where useful.
 - This module works independently. Logs do not replace current usage documentation when no architecture module is selected; missing log skills do not justify putting change history into current-version documentation.
 - Use the user's requested or established project language. English instructions do not require English output or renaming existing paths.
+
+Directory naming: honor an explicit project naming preference, then existing equivalent locations; for newly needed categories without an established name, use Chinese names in Chinese-language projects and English names in English-language projects. A single reply in another language does not change the project convention. Do not create both language trees or rename existing paths without a migration request. Keep standard entry names and shared paths such as README.md, AGENTS.md, doc/, tools/, agent-workspace/, ref/, and tasks-and-prompt/ unchanged. For other project languages, follow the user’s naming preference and existing conventions.
