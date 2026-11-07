@@ -26,6 +26,8 @@ Select useful causal relationships: how a specific problem motivates a mechanism
 
 Provide enough evidence references for important facts: source paths and symbols, tests or measurements, decision records, or primary sources. State only confirmed validation coverage and limits; do not publish all execution logs or invent completeness when evidence is missing.
 
+Example for a proposed public JSON export: encode exchanged text as UTF-8. Check the output bytes for a non-ASCII value against a UTF-8 fixture. A filename such as `report.json` is a project choice. Record the test result once run. [RFC 8259 §8.1](https://www.rfc-editor.org/rfc/rfc8259.html#section-8.1)
+
 ## Shared knowledge, history, and lessons
 
 Maintain shared mechanisms once in the overview or a topic page. Features explain their use and differences, linking shared material. Separate architectural decision records are for significant choices requiring traceability; include context, choice, status, and consequences in the development log or an existing decision directory. Current pages retain current rationale and useful links. Do not create a directory without such a need.

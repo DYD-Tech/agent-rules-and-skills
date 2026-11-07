@@ -20,7 +20,7 @@ You do not need to clone manually. Give an agent the repository URL and task; it
 
 Provide [this repository](https://github.com/DYD-Tech/agent-rules-and-skills) and say:
 
-> Install General development, Architecture–Features–Implementation, Development log, and Clear communication from this repository into the current project. First read README.en.md, INSTALL.en.md, and catalog/modules.json. Install the selected modules and integrate their loading instructions, preserve existing rules and local changes, and verify actual loading.
+> Install General development, Architecture–Features–Implementation, Development log, and Clear communication from this repository into the current project. First read README.en.md, INSTALL.en.md, and catalog/modules.json. Install the selected modules with shared rules before project-specific instructions, preserve existing rules and local changes, and verify actual loading.
 
 You may select fewer modules. General development plus Architecture–Features–Implementation installs two rule files and one skill. Clear communication retrieves the complete skill from the separate communication-skills repository and configures use on every task; no second URL is needed.
 

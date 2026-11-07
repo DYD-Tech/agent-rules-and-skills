@@ -48,6 +48,8 @@ Verify official guidance against the actual environment instead of treating a ge
 
 Common native project paths are `.agents/skills/`, `.claude/skills/`, `.cursor/skills/`, `.github/skills/`, and `.opencode/skills/`, respectively. These are neither exclusive paths nor guarantees for every cloud or review mode. Verify personal locations and version differences using actual configuration or official documentation. Record an installer's real destination rather than creating another installation to match an example.
 
+Place the single managed block before the first project-specific instruction in each effective project entry. Keep required front matter and the document title first. Within the block, load General development first when selected, followed by other selected rules and skill triggers. Project-specific rules follow the closing marker. On reinstall or upgrade, move the existing block intact before updating its managed contents. Preserve local edits, wording and relative order of all project rules. Verify the final order and exactly one marker pair on repeated installation. Host-defined precedence still applies across separate instruction files.
+
 Maintain one identifiable module block in the loading instructions, preserving other content. Example for General development and Architecture–Features–Implementation with skills in `.agents/skills/`:
 
 ```text
@@ -63,6 +65,9 @@ This block and installed files are managed by the source recorded in
 agent-rules-and-skills.lock.json, not independent standards. Keep project
 conventions separate; propose or return shared improvements to an authorized source.
 <!-- agent-rules-and-skills:end -->
+
+## Project rules
+(existing project instructions)
 ```
 
 Generate activation for every selected module from the manifest: development-log applies to meaningful completed changes; clear-communication applies on every task. Do not omit modules by copying only this example. Explain substantive conflicts; ordinary path integration can proceed, but installation does not authorize rewriting unrelated rules.

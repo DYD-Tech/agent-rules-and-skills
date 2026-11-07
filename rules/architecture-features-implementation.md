@@ -2,6 +2,8 @@
 
 Use architecture–features–implementation documentation to support development, acceptance, and long-term learning. The default location is `doc/架构-功能-实现/` (Chinese) or `doc/architecture-features-implementation/` (English); reuse an existing equivalent rather than maintaining duplicate explanations. Write in the requested or established project language. English instructions do not require English output or renaming existing paths.
 
+- In the feature page, connect each adopted standard or established practice to the behavior it governs, its primary source and relevant provision, the implementation decision, and actual verification coverage. Preserve the difference between requirements, recommendations, and project choices.
+
 - Architecture explains the overall structure, collaboration, and key choices. Features describe the complete capabilities and external behavior. Implementation explains mechanisms, reasons, costs, and applicability, with useful source and verification references. Readers should understand the prose without reading code; agents must verify its factual basis.
 - Describe the currently supported version. Preserve reasons and limits needed to understand the current design; do not append dated change history. Put superseded approaches, chronology, and replaced decisions in development logs or existing historical records, linking when useful. This boundary applies without the log module too.
 - Read relevant documentation before development. Record intended new behavior in existing requirements or task records. At delivery, update current documentation from the actual implementation and verification. Do not present plans as existing features or unknowns as facts.

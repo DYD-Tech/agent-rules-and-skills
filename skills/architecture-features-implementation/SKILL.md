@@ -45,6 +45,8 @@ Prose must stand alone. Code references support verification and maintenance; th
 
 Edit coherent passages touched by the task and necessary adjacent text. Preserve accurate terms, identifiers, and useful explanations. Update current descriptions when decisions change. Preserve valuable superseded decisions in history with status and replacement links; do not leave old designs presented as current or rewrite history as if the change never happened.
 
+In the feature page, connect each adopted standard or established practice to the behavior it governs, its primary source and relevant provision, the implementation decision, and actual verification coverage. Preserve the difference between requirements, recommendations, and project choices.
+
 ### 3. Check the change and deliver
 
 - Behavior, values, defaults, failures, and evidence agree. Plans are not presented as current, and unknowns are not polished into facts.
