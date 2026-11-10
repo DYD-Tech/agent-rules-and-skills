@@ -10,6 +10,8 @@ The following rules make these goals actionable while preserving task scope and 
 
 ## Task scope
 
+- Describe requested work through deliverables and acceptance conditions. Leave unrequested features out of both the work and its records. A request to narrow the task updates the remaining deliverables. When an earlier plan defers a capability, check which milestone that decision covered. A later explicit request authorizes work on that capability within current project constraints. Seek clarification only when a specific, still-applicable constraint conflicts or its applicability would materially change the work.
+
 - Understand the objective, relevant implementation, and constraints before editing. Establish expected behavior and how to verify completion. Handle simple tasks directly; use a brief plan for cross-module changes, data changes, or significant tradeoffs. Reuse existing requirements and task records rather than requiring a separate acceptance document.
 - Complete the necessary authorized work without unrelated refactoring or overwriting user changes. Investigate important ambiguity using available evidence, then ask a specific question if needed. Decide routine implementation details yourself; do not request permission already granted.
 - When asked to change rules or skills, work within the specified scope. Do not relax constraints for convenience. A review-only request calls for findings and suggestions, not replacement of active rules.
@@ -46,7 +48,7 @@ The following rules make these goals actionable while preserving task scope and 
 
 ## Documentation and communication
 
-- Follow the user's language and requested format; otherwise follow the conversation and established project language. English instructions do not require English output or bilingual output. Explain conclusions, reasons, and conditions before removing repetition. Retain useful standard terms with enough context; do not invent vague jargon or replace mechanisms with analogies.
+- Follow the user's language and requested format; otherwise follow the conversation and established project language. English instructions do not require English output or bilingual output. Express each thought fully enough for readers to understand the conclusion, its reasons, and when it applies. Cut restatements of the same point and irrelevant lead-ins. Split unwieldy sentences while keeping the actions, their objects, and the connections readers need. Retain useful standard terms with enough context; do not invent vague jargon or replace mechanisms with analogies.
 - User documentation explains behavior; development documentation explains mechanisms and choices; comments explain non-obvious intent. Preserve background useful for understanding and long-term learning without translating code line by line or adding unrelated tutorials.
 - Update affected documentation in the same task when behavior, mechanisms, or important constraints change. Make edited passages coherent and clear while preserving accurate names and facts; do not rewrite the whole repository by default.
 - For confirmed, non-obvious problems likely to recur and worth remembering, check for existing coverage, then record symptoms, cause, remedy, necessary evidence, and applicability. Reuse the project knowledge directory; if none exists, use `doc/值得记住的坑/` (Chinese) or `doc/lessons-learned/` (English) with topic-based filenames. Omit trial-and-error chronology while retaining evidence supporting conclusions.

@@ -30,6 +30,6 @@ Match requested names against IDs or aliases; ask only about ambiguous matches. 
 
 ## Languages and stable identity
 
-The manifest keeps one entry per module, with English descriptive and activation text and Chinese aliases/tags for discovery. Both language guides use the same IDs, paths, dependencies, sources, and versions. Install the canonical English runtime instructions only; agents follow the user's output language. Chinese human-readable counterparts live outside runtime packages in [doc/中文对照](../doc/中文对照/README.md). Do not create per-language modules or install both versions.
+Bundled rules and skills are available in English and Chinese under the English and 中文 folders. Ask for a language when installing, for example “Install General development and Project repository structure in English.” Install one language per module using its stable ID and target path. The locales map supplies complete source paths per language. Top-level paths provide the English default.
 
 See [synchronization](../SYNC.en.md) for authority, forks, adapters, and project differences. Users can fork the catalog; use the selected repository rather than assuming its location identifies the original author.

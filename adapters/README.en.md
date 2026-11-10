@@ -13,7 +13,7 @@ Maintain host loading differences here. Standard content remains in `rules/` and
 
 Keep adaptation definitions in the selected source repository. Project installation records identify definition and version. Mark new, unregistered adapters temporary and pending source integration; they must not silently become permanent agent-specific policies. Unchanged copies in different directories still need provenance and destination records.
 
-Language is not a reason to rewrite the installed skill. Runtime instructions remain canonical English, with user-language output. Host display metadata may be localized when supported and recorded, without changing the skill ID, behavior, or activation.
+Adapt the selected language package for the host. Both languages use the same module ID, activation, and target layout.
 
 ## Evidence and limits as of 2026-10-28
 

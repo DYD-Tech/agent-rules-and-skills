@@ -31,6 +31,8 @@ These pages describe the currently supported version. Put intended behavior and 
 
 ### 1. Establish evidence and affected content
 
+When editing a current page, remove obsolete milestone exclusions from the affected passage and describe verified behavior. For example, a request to add XLSX export supersedes an old “CSV only for MVP” plan. Document CSV as the current format until XLSX works and is verified. Preserve original briefs as historical records.
+
 Compare the task, relevant documents, code, configuration, and verification. Distinguish implemented behavior, plans, and unknowns. Read only what resolves relevant uncertainty. Keep working notes in the current task context rather than creating another ledger.
 
 When code and documentation disagree, determine whether the implementation violates requirements or the documentation is outdated. Use user requirements, applicable conventions, and actual behavior. Explain important unresolved conflicts; do not silently change code to match prose or document defects as correct behavior. Documentation work alone does not authorize product-code changes.

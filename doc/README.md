@@ -18,6 +18,6 @@
 
 多项目与多代理的一致性见 [唯一真源设计](设计/single-source-maintenance.md)。
 
-双语使用入口见 [English README](../README.en.md)；运行规则与技能的中文阅读版本及同步维护要求见 [中文对照](中文对照/README.md)。历史研究与备份保持原文。
+中英文安装和维护方式见 [双语分发](设计/双语分发.md)。
 
 项目仓库结构模块见 [设计](设计/project-structure.md) 与 [首次验证](评测/project-structure.md)。

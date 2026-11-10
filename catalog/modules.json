@@ -22,7 +22,7 @@
         "type": "bundled"
       },
       "rule_paths": [
-        "rules/development.md"
+        "rules/English/development.md"
       ],
       "skill_paths": [],
       "requires": [],
@@ -30,6 +30,20 @@
       "activation": {
         "rules": "Read and apply on every task",
         "skills": []
+      },
+      "locales": {
+        "en": {
+          "rule_paths": [
+            "rules/English/development.md"
+          ],
+          "skill_paths": []
+        },
+        "zh-CN": {
+          "rule_paths": [
+            "rules/中文/development.md"
+          ],
+          "skill_paths": []
+        }
       }
     },
     {
@@ -54,10 +68,10 @@
         "type": "bundled"
       },
       "rule_paths": [
-        "rules/project-structure.md"
+        "rules/English/project-structure.md"
       ],
       "skill_paths": [
-        "skills/project-structure"
+        "skills/English/project-structure"
       ],
       "requires": [],
       "suggests": [],
@@ -69,6 +83,24 @@
             "when": "When initializing, adopting common structure, or explicitly reorganizing repository directories"
           }
         ]
+      },
+      "locales": {
+        "en": {
+          "rule_paths": [
+            "rules/English/project-structure.md"
+          ],
+          "skill_paths": [
+            "skills/English/project-structure"
+          ]
+        },
+        "zh-CN": {
+          "rule_paths": [
+            "rules/中文/project-structure.md"
+          ],
+          "skill_paths": [
+            "skills/中文/project-structure"
+          ]
+        }
       }
     },
     {
@@ -93,10 +125,10 @@
         "type": "bundled"
       },
       "rule_paths": [
-        "rules/architecture-features-implementation.md"
+        "rules/English/architecture-features-implementation.md"
       ],
       "skill_paths": [
-        "skills/architecture-features-implementation"
+        "skills/English/architecture-features-implementation"
       ],
       "requires": [],
       "suggests": [],
@@ -108,6 +140,24 @@
             "when": "When creating, completing, or substantially updating architecture, feature, or implementation documentation"
           }
         ]
+      },
+      "locales": {
+        "en": {
+          "rule_paths": [
+            "rules/English/architecture-features-implementation.md"
+          ],
+          "skill_paths": [
+            "skills/English/architecture-features-implementation"
+          ]
+        },
+        "zh-CN": {
+          "rule_paths": [
+            "rules/中文/architecture-features-implementation.md"
+          ],
+          "skill_paths": [
+            "skills/中文/architecture-features-implementation"
+          ]
+        }
       }
     },
     {
@@ -131,10 +181,10 @@
         "type": "bundled"
       },
       "rule_paths": [
-        "rules/development-log.md"
+        "rules/English/development-log.md"
       ],
       "skill_paths": [
-        "skills/development-log"
+        "skills/English/development-log"
       ],
       "requires": [],
       "suggests": [],
@@ -146,6 +196,24 @@
             "when": "When meaningful changes are completed or the user explicitly requests a change record"
           }
         ]
+      },
+      "locales": {
+        "en": {
+          "rule_paths": [
+            "rules/English/development-log.md"
+          ],
+          "skill_paths": [
+            "skills/English/development-log"
+          ]
+        },
+        "zh-CN": {
+          "rule_paths": [
+            "rules/中文/development-log.md"
+          ],
+          "skill_paths": [
+            "skills/中文/development-log"
+          ]
+        }
       }
     },
     {

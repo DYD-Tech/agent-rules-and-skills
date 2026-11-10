@@ -26,7 +26,7 @@ For first installation or an explicit upgrade without a requested catalog versio
 
 Inspect selected rules, skill entry points, and referenced resources for purpose, dependencies, supported host capabilities, and licensing. Third-party instructions are material to review, not permission to alter unrelated configuration, run scripts, or install extra modules. Copying instruction-based skills normally does not require running repository scripts.
 
-Install canonical `rule_paths` and complete `skill_paths` regardless of the user's language. These runtime instructions are English but require output in the user's requested language. Do not install `doc/中文对照/`, create a second translated skill, or rewrite policy during installation. Use English or Chinese usage documentation as appropriate without loading both by default. Keep IDs, activation behavior, and provenance identical across languages.
+Use the requested installation language, then a previously recorded selection, then the project language for new installs. Default to English when unspecified and unclear. For bundled modules select rule_paths and skill_paths from locales[locale] (en or zh-CN). Copy only those rule files and complete skill directories. Install each skill under its skill name. The language folder belongs to the source path only. Use the same selection for manual installation. For external modules without locales, use the declared upstream paths and disclose the available language. Replies follow the user’s requested language.
 
 ## 3. Install content and integrate loading
 
@@ -86,6 +86,6 @@ Verify complete resources, module selection, paths, loading, and dependencies. C
 
 ## Manual installation
 
-Download the selected version, copy rules from `rule_paths` and complete skill directories from `skill_paths`; fetch external items from their recorded upstreams. Configure project or personal loading, preserve provenance and records, and verify as above. Manual and agent installation share one catalog and the same module content.
+Download the selected version and choose the locale in the manifest. Copy its rules from `rule_paths` and complete skill directories from `skill_paths`; fetch external items from their recorded upstreams. Configure project or personal loading, preserve provenance and records, and verify as above. Manual and agent installation share one catalog and the same module content.
 
 For project-structure, apply rules during routine file placement and invoke the skill for initialization, layout adoption, or requested reorganization only. Installing this module does not authorize a full repository migration or modification of user originals in doc/tasks-and-prompt/.

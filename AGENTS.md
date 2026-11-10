@@ -4,11 +4,11 @@
 
 ## 每次工作
 
-- 读取并应用 [通用开发规则](rules/development.md)。当前上下文已有最新内容时复用；文件更新或上下文丢失后重读。
+- 读取并应用 [通用开发规则](rules/中文/development.md)。当前上下文已有最新内容时复用；文件更新或上下文丢失后重读。
 - 应用可用的 clear-communication 技能。当前本地配套仓库入口为 `../communication-skills/skills/clear-communication/SKILL.md`；先使用已安装版本，无已安装版本时读取该路径。若两者都不存在，说明缺失并按通用规则的表达要求继续任务。迁移本仓库时核实路径，不假定其他机器有相邻仓库。
-- 应用 [文档维护规则](rules/architecture-features-implementation.md)。本仓库的技能入口是 [architecture-features-implementation](skills/architecture-features-implementation/SKILL.md)，满足触发条件时读取并执行，无需用户重复点名。
+- 应用 [文档维护规则](rules/中文/architecture-features-implementation.md)。本仓库的技能入口是 [architecture-features-implementation](skills/中文/architecture-features-implementation/SKILL.md)，满足触发条件时读取并执行，无需用户重复点名。
 
-- 应用 [开发日志规则](rules/development-log.md)，有值得记录的变更时读取 [开发日志技能](skills/development-log/SKILL.md)。
+- 应用 [开发日志规则](rules/中文/development-log.md)，有值得记录的变更时读取 [开发日志技能](skills/中文/development-log/SKILL.md)。
 
 ## 本仓库的维护约定
 
@@ -26,9 +26,9 @@
 
 ## 双语维护
 
-- 分发的 rules/、skills/ 及技能运行资源使用统一英文，输出语言遵循用户要求；中文阅读对照在 doc/中文对照，不作为运行依赖安装。
-- 修改规则、技能或使用流程时，同轮更新对应语言版本；对照入口见 doc/中文对照/README.md。保持模块 ID、路径、触发和约束一致，不在安装时自行翻译政策，不追溯改写历史备份。
+- 本仓库采用中文运行规则和技能。分发内容按 English 和中文分别维护，两种语言均可直接安装。
+- 修改模块行为时，同轮更新两种语言的规则、技能及运行资源，对照适用条件、例外和触发范围。安装语言管理见 [双语分发](doc/设计/双语分发.md)。
 
 ## 项目结构
 
-应用 [结构规则](rules/project-structure.md)；初始化、接入或明确整理布局时使用 [project-structure](skills/project-structure/SKILL.md)。日常存放不触发全库扫描。doc/tasks-and-prompt/ 为用户放入的原始材料，代理不写入、不改动；仅用户为当前任务指定时采用，之后保留为历史，不自动当成现行要求。
+应用 [结构规则](rules/中文/project-structure.md)；初始化、接入或明确整理布局时使用 [project-structure](skills/中文/project-structure/SKILL.md)。日常存放不触发全库扫描。doc/tasks-and-prompt/ 为用户放入的原始材料，代理不写入、不改动；仅用户为当前任务指定时采用，之后保留为历史，不自动当成现行要求。

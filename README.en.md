@@ -44,7 +44,7 @@ Modules are independently selectable; suggestions are not installed automaticall
 
 ## Languages
 
-Usage documentation is available in Chinese and English. Distributable rules, skill entry points, and runtime references use one English version; agents follow the user's requested output language. Do not install a second skill or load both languages. [Chinese counterparts and maintenance policy](doc/中文对照/README.md) support human review and are not runtime dependencies. Historical research and backups remain in their original language. Module IDs, paths, and version tracking do not change with language.
+Bundled rules and skills are available in English and Chinese under the English and 中文 folders. Ask for a language when installing, for example “Install General development and Project repository structure in English.” Install one language per module using its stable ID and target path. [Maintenance](doc/设计/双语分发.md)
 
 ## Updates and contributions
 
@@ -73,7 +73,7 @@ Use the [manual procedure](INSTALL.en.md#manual-installation): copy the selected
 ## Documentation responsibilities
 
 - [Architecture–features–implementation](doc/架构-功能-实现/00-总览与分层.md) describes current capabilities, mechanisms, and rationale.
-- [Development log](doc/开发日志/CHANGELOG.md) records changes, history, evidence, and remaining work.
+- [Development log](doc/开发日志/CHANGELOG.md) records completed changes, relevant reasons, and verification results.
 - Other `doc/` research, design, and evaluation records explain development of these modules and are not loaded during normal skill use. These records are currently in Chinese.
 
 See the [feature overview](doc/架构-功能-实现/01-功能全貌.md), [modular design](doc/设计/module-installation-design.md), and [evaluation record](doc/评测/evaluation.md). Skills cannot guarantee model compliance or replace testing and access controls. This repository has not been installed into a personal global environment, and cross-host installation tests remain incomplete.
